@@ -25,39 +25,43 @@ optional arguments:
   --sleep SLEEP, -s SLEEP
                         Sleep this long between lines (in seconds)
 
-sample:
-python apache-fake-log-gen.py -n 3 -o CONSOLE -s 3
-python apache-fake-log-gen.py -n 0 -o LOG -s 1
+
+
+Test:
+```
+python3 apache-fake-log-gen.py -n 3 -o CONSOLE -s 3
+python3 apache-fake-log-gen.py -n 0 -o LOG -s 1
+```
 
 
 ```
-$ python apache-fake-log-gen.py  
+$ python3 apache-fake-log-gen.py  
 ```
 
 Generate 100 log lines into a .log file
 ```
-$ python apache-fake-log-gen.py -n 100 -o LOG 
+$ python3 apache-fake-log-gen.py -n 100 -o LOG 
 ```
 
 Generate 100 log lines into a .gz file at intervals of 10 seconds
 ```
-$ python apache-fake-log-gen.py -n 100 -o GZ -s 10
+$ python3 apache-fake-log-gen.py -n 100 -o GZ -s 10
 ```
 
 Infinite log file generation (useful for testing File Tail Readers)
 ```
-$ python apache-fake-log-gen.py -n 0 -o LOG 
+$ python3 apache-fake-log-gen.py -n 0 -o LOG 
 ```
 
 Prefix the output filename 
 ```
-$ python apache-fake-log-gen.py -n 100 -o LOG -p WEB1
+$ python3 apache-fake-log-gen.py -n 100 -o LOG -p WEB1
 ```
 
 
 Detailed help
 ```
-$ python apache-fake-log-gen.py -h
+$ python3 apache-fake-log-gen.py -h
 usage: apache-fake-log-gen.py [-h] [--output {LOG,GZ,CONSOLE}]
                               [--num NUM_LINES] [--prefix FILE_PREFIX]
                               [--sleep SLEEP]
@@ -78,8 +82,8 @@ optional arguments:
 
 
 ## Requirements
-* Python 2.7
-* ```pip install -r requirements.txt```
+* Python 3.6.+
+* ```pip3 install -r requirements.txt```
 
 ## License
 This script is released under the [Apache version 2](LICENSE) license.
