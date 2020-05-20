@@ -1,10 +1,10 @@
 # Fake Apache Log Generator
 
-This script generates a boatload of fake apache logs very quickly. Its useful for generating fake workloads for [data ingest](http://github.com/streamsets/datacollector) and/or analytics applications.
+This script generates a boatload of fake apache logs very quickly. Its useful for generating fake workloads for [data ingest](https://nifi.apache.org/) and/or analytics applications.
 
 It can write log lines to console, to log files or directly to gzip files.
 
-It utilizes the excellent [Faker](https://github.com/joke2k/faker/) library to generate realistic ip's, URI's etc.
+It utilizes the excellent [Faker](https://faker.readthedocs.io/en/master/) library to generate realistic ip's, URI's etc.
 
 ***
 
@@ -13,6 +13,7 @@ It utilizes the excellent [Faker](https://github.com/joke2k/faker/) library to g
 Generate a single log line to STDOUT
 
 optional arguments:
+```
   -h, --help            show this help message and exit
   --output {LOG,GZ,CONSOLE}, -o {LOG,GZ,CONSOLE}
                         Write to a Log file, a gzip file or to STDOUT
@@ -24,10 +25,10 @@ optional arguments:
                         Prefix the output file name
   --sleep SLEEP, -s SLEEP
                         Sleep this long between lines (in seconds)
+```
 
 
-
-Test:
+First Tests:
 ```
 python3 apache-fake-log-gen.py -n 3 -o CONSOLE -s 3
 python3 apache-fake-log-gen.py -n 0 -o LOG -s 1
